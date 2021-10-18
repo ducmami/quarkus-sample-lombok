@@ -1,0 +1,23 @@
+quarkus:
+  banner:
+    path: zodiac.txt
+    enabled: true
+  application:
+    name: sample-lombok
+    version: 0.0.1
+  http:
+    root-path: /api/
+    non-application-root-path: system
+  log:
+    console:
+      async: true
+      format: ts=%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} level=%p pid=%i traceId=%X{traceId} parentId=%X{parentId} spanId=%X{spanId} sampled=%X{sampled} caller=%c thread="%t" message="%s%e"%n
+
+
+'%dev':
+  quarkus:
+    http:
+      port: 38801
+    log:
+      console:
+        format: "%d{yyyy-MM-dd HH:mm:ss} %-5p %i [%X{traceId},%X{parentId},%X{spanId},%X{sampled}] %-10t %c{1.}: %s%e%n"

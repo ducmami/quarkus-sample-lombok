@@ -28,7 +28,7 @@ dependencies {
     implementation 'io.quarkus:quarkus-smallrye-metrics'
 
 //    data
-    implementation 'io.quarkus:quarkus-hibernate-reactive-panache'
+//    implementation 'io.quarkus:quarkus-hibernate-reactive-panache'
 
 
 //    camel
